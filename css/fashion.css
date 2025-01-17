@@ -1,0 +1,648 @@
+/* ALL FONTS */
+/* font-family: 'Redressed', cursive;
+font-family: 'Brygada 1918', serif;
+font-family: 'Great Vibes', cursive;
+font-family: 'Pinyon Script', cursive;*/
+
+/* ALL COLORS USED */
+:root{
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 100%, 88%);
+  --first-color-second: hsl(var(--hue-color), 100%, 88%);
+  --first-color-alt: hsl(var(--hue-color), 100%, 88%);
+  --title-color: hsl(var(--hue-color), 64%, 18%);
+  --text-color: hsl(var(--hue-color), 24%, 35%);
+  --text-color-light: hsl(var(--hue-color), 8%, 60%);
+  --input-color: hsl(var(--hue-color), 24%, 97%);
+  --body-color: hsl(var(--hue-color), 100%, 99%);
+  --white-color: #FFF;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+  --black:#000;
+  --white:#fff;
+  --orange-red: #ff4500;
+  --brick-red: #b22222;
+  --light-coral: #f08080;
+  --light-red: #ff4b4d;
+  --dark-gray: #686868;
+  --light-pink: #ffc5c0;  /* colors used */
+  --black:#000;
+  --white:#fff;
+  --orange-red: #ff4500;
+  --brick-red: #b22222;
+  --light-coral: #f08080;
+  --light-red: #ff4b4d;
+  --dark-gray: #686868;
+  --light-pink: #ffc5c0;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Open Sans', sans-serif;
+  --text-font: 'Brygada 1918', serif;
+  --title-font: 'Redressed', cursive;
+  --logo-font:'Pinyon Script', cursive;
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  /*========== Margenes Bottom ==========*/
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-25: 1.25rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin:0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--text-font);
+  color: var(--black);
+  font-size: 1.25rem;
+}
+
+body {
+  text-align: center;
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+}
+
+h1 {
+  margin:0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 968px;
+  margin-left: var(--mb-1);
+  margin-right: var(--mb-1);
+}
+
+/* navigation */
+/*=============== HEADER ===============*/
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: transparent;
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--black);
+}
+
+
+.nav__toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav__menu {
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    background-color: var(--white);
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
+    padding: 3rem;
+    transition: .4s;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+  color: var(--black);
+}
+
+.nav__item a{
+  color: var(--black);
+  font-size: 20px;
+}
+
+.nav__item a:hover,
+.nav__item a:focus {
+  color: var(--dark-gray);
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+
+.nav__close {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+/* show menu */
+.show-menu {
+  right: 0;
+}
+
+/* Active link */
+.active-link {
+  position: relative;
+  color: var(--black);
+}
+
+.active-link::before {
+  content: '';
+  position: absolute;
+  background-color: var(--black);
+  width: 100%;
+  height: 2px;
+  bottom: -.75rem;
+  left: 0;
+}
+
+/* divider between the header and the main content */
+.line hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid var(--black);
+  margin: 0px auto;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__logo {
+    padding-left: 460px;
+    padding-top: 5px;
+  }
+  .nav__link {
+    color: var(--white-color);
+    text-transform: initial;
+  }
+  .nav__link:hover {
+    color: var(--white-color);
+  }
+  .nav__menu {
+    display: flex;
+    column-gap: 1rem;
+    padding-bottom: 20px;
+    padding-left: 80px;
+  }
+  .nav__list {
+    flex-direction: row;
+    column-gap: 4rem;
+  }
+  .nav__toggle, .nav__close {
+    display: none;
+  }
+}
+/* MAIN */
+
+/* main image */
+.background-img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/fashionbg.jpg);
+  background-size: contain;
+  top:100px;
+}
+
+/* small article to go with the main image */
+.text-box {
+  width:90%;
+  color: var(--black);
+  position: absolute;
+  top: 95%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  background-color: var(--white);
+}
+
+.text-box h1 {
+  font-size: 62px;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 20px;
+  color: var(--black);
+}
+
+/* street fashion content */
+.street-fashion {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 150px;
+}
+
+/* street fashion content heading */
+.street-fashion h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.street-fashion p {
+  color: var(dark-gray);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+/* street fashion content setting */
+.sf-row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sf-col {
+  flex-basis: 31%;
+  background: #fff4f4;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.sf-col h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+/* adding shadow transition to the content boxes */
+.sf-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+/* trending fashion images content */
+
+.trending {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.trend-row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trend-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.trend-col img {
+  width:100%;
+  display: block;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover {
+  background: rgba(178,0,0,0.7);
+}
+
+.layer h3 {
+  width:100%;
+  font-weight: 500;
+  color: var(--white);
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  opacity: 0;
+}
+
+.layer:hover h3 {
+  bottom: 49%;
+  opacity:1;
+}
+
+.ny {
+  width: 80%;
+  margin:auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.ny-row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ny-col {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.ny-col img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.ny-col p {
+  padding: 0;
+}
+
+.ny-col h3 {
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.ny-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+/* responsive settings for the main content section*/
+@media (max-width:700px) {
+
+  /* reducing the main image size */
+  .background-img {
+    background-size: 360px 400px;
+  }
+
+  /* reducing the font size of the text to go with the main image */
+  .text-box h1 {
+    font-size: 30px;
+  }
+
+  /* changing street fashion content from row to column */
+  .sf-row {
+    flex-direction: column;
+  }
+
+  /* changing trending content from row to column */
+  .trend-row {
+    flex-direction: column;
+  }
+
+  /* changing ny content from row to column */
+  .ny-row {
+    flex-direction: column;
+  }
+}
+
+/* FOOTER */
+footer {
+  width:100%;
+  position: absolute;
+  bottom:auto;
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  color: var(--white);
+  padding: 20px 0 20px;
+  border-top-left-radius: 125px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+/* second and third column setting */
+.col:nth-child(2), .col:nth-child(3) {
+  flex-basis: 15%;
+}
+
+/* footer logo */
+.footer-logo {
+  width: 80px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* column text settings */
+.col h3 {
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.col p {
+  margin: 20px 0;
+  width: fit-content;
+}
+
+.col h4 {
+  margin: 20px 0;
+  width: fit-content;
+}
+
+/* email-id in the newsletter */
+.email-id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* footer navigation bar */
+.footer-navbar {
+  text-align: left;
+}
+
+.footer-navbar ul li {
+   list-style: none;
+   margin-bottom: 12px;
+ }
+
+.footer-navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Newsletter part */
+form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 60px;
+}
+
+form .far {
+  font-size: 18px;
+  background: transparent;
+  color: #ccc;
+  border:0;
+  outline: none;
+}
+
+form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+form button .fas {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* social media icons */
+.social-icons .fab {
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/* line above copyright text */
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+/* copyright text */
+.copyright {
+  text-align: center;
+}
+
+/* underline design under the titles */
+.underline {
+  width: 100%;
+  height:5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+
+/* pulse in the underline */
+.underline span {
+  width:15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+
+/* adding animation in underline */
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* footer responsive settings */
+@media (max-width:700px) {
+  footer {
+    top: unset;
+  }
+
+  .col {
+    flex-basis: 100%;
+  }
+
+  .col:nth-child(2), .col:nth-child(3) {
+    flex-basis: 100%;
+  }
+}
+
+/* main navigation bar responsive settings */
+@media only screen and (min-width: 750px) {
+  nav ul {
+    font-size: 25px;
+  }
+}

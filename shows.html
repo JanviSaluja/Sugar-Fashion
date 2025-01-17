@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sugar Fashion-Shows</title>
+
+        <link rel="stylesheet" href="css/shows.css">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+        <!-- ICONS BOXICONS -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- online script loaded for social media icons and envelope and arrow icon near email-id in footer -->
+        <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+    </head>
+    <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+          <nav class="nav container">
+              <a href="index.html" class="nav__logo"><img src="img/logo.png" width=316p></a>
+
+              <div class="nav__menu" id="nav-menu">
+                  <ul class="nav__list">
+                      <li class="nav__item">
+                          <a href="fashion.html" class="nav__link ">Fashion</a>
+                      </li>
+                      <li class="nav__item">
+                          <a href="beauty.html" class="nav__link">Beauty</a>
+                      </li>
+                      <li class="nav__item">
+                          <a href="celebrities.html" class="nav__link">Celebrities</a>
+                      </li>
+                      <li class="nav__item">
+                          <a href="jwellery.html" class="nav__link">Jwellery</a>
+                      </li>
+                      <li class="nav__item">
+                          <a href="shows.html" class="nav__link active-link">Shows</a>
+                      </li>
+                  </ul>
+                  <div class="nav__close" id="nav-close">
+                      <i class='bx bx-x' ></i>
+                  </div>
+              </div>
+
+              <div class="nav__btns">
+                  <div class="nav__toggle" id="nav-toggle">
+                      <i class='bx bx-grid-alt' ></i>
+                  </div>
+              </div>
+          </nav>
+          <div class="line">
+            <hr>
+          </div>
+      </header>
+            <!-- ===== HOME =====-->
+            <div class="home">
+                <div class="parallax home__parallax home__parallax-img1" data-rellax-speed="-9"></div>
+                <h1 class="parallax home__title" data-rellax-speed="-6">Seoul Fashion Week</h1>
+                <span class="parallax home__subtitle" data-rellax-speed="-5">2022 shows</span>
+
+                <div class="home__scroll">
+                   <a href="#section"><i class='bx bx-mouse'></i></a>
+                </div>
+            </div>
+
+            <!-- ===== SECTION =====-->
+            <section class="l-section" id="section">
+                <div class="section">
+                    <div class="section__data">
+                        <h2 class="section__title">Street Style Day</h2>
+                        <p class="section__text">Despite the surge of Covid cases, Seoul Fashion Week trudged on ahead.
+                          The opening highlight involved Lee Jung-Jae, who was chosen as the global ambassador of the event.
+                          A series of hybrid collections of both digital and physical shows were presented, inviting stylish attendees
+                          to visit the city’s Seoul Museum of Craft Art—the main venue for the season. </p>
+                    </div>
+
+                    <img src="img/show1.jpg" alt="" class="section__img">
+                </div>
+                <div class="section">
+                    <img src="img/show2.jpg" alt="" class="section__img">
+                    <img src="img/show3.jpg" alt="" class="section__img">
+                </div>
+                <div class="section">
+                    <img src="img/show4.jpg" alt="" class="section__img">
+                </div>
+        </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer>
+          <div class="row">
+            <div class="col">
+              <!-- logo -->
+              <div class="footer-logo">
+                <a href="index.html"><img src="img/logo.png" width="300px"></a>
+              </div>
+              <!-- text under the logo -->
+              <p>Follow us on our social medias for more content and to stay up-to-date
+              with all the trends. Establish your style with us.</p>
+            </div>
+            <div class="col">
+              <!-- address column -->
+              <h3>Office <div class="underline"><span></span></div></h3>
+              <p>Summerdale</p>
+              <p>Boon Lay, Singapore</p>
+              <p class="email-id">saluja002@mymail.sim.edu.sg</p>
+              <h4>+65-84357902</h4>
+            </div>
+            <div class="col">
+              <!-- footer navigation -->
+              <div class="footer-navbar">
+                <h3>Links <div class="underline"><span></span></div></h3>
+                <ul>
+                  <li><a href="fashion.html">Fashion</a></li>
+                  <li><a href="beauty.html">Beauty</a></li>
+                  <li><a href="celebrities.html">Celebrities</a></li>
+                  <li><a href="jwellery.html">Jwellery</a></li>
+                  <li><a href="shows.html">Shows</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+              <!-- newsletter form -->
+              <h3>Newsletter <div class="underline"><span></span></div></h3>
+              <form>
+                <i class="far fa-envelope"></i>
+                <input type="email" placeholder="Enter your email-id" required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+              </form>
+              <!-- social media icons -->
+              <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-pinterest"></i>
+              </div>
+            </div>
+          </div>
+          <!-- divider between footer and the copyright content -->
+          <hr>
+          <p class="copyright">Bling Fashion Magazine 2022 - All Rights Reserved</p>
+        </footer>
+
+        <!-- RELLAX JS -->
+        <script src="javascript/rellax-shows.min.js"></script>
+
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+        <!-- SCROLL REVEAL -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!-- MAIN JS -->
+        <script src="javascript/shows.js"></script>
+
+        <!--============FOR HEADER================== -->
+        <!--=============== SWIPER JS ===============-->
+        <script src="javascript/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="javascript/main.js"></script>
+
+    </body>
+</html>

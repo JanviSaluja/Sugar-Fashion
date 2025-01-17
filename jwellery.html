@@ -1,0 +1,402 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="css/swiper-bundle-jwellery.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="css/jwellery.css">
+
+        <!-- online script loaded for social media icons and envelope and arrow icon near email-id in footer -->
+        <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+
+        <title>Sugar Fashion- Jwellery</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="index.html" class="nav__logo"><img src="img/logo.png" width=316px></a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="fashion.html" class="nav__link ">Fashion</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="beauty.html" class="nav__link">Beauty</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="celebrities.html" class="nav__link">Celebrities</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="jwellery.html" class="nav__link active-link">Jwellery</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="shows.html" class="nav__link">Shows</a>
+                        </li>
+                    </ul>
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x' ></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+
+                    <div class="nav__shop" id="cart-shop">
+                        <i class='bx bx-shopping-bag' ></i>
+                    </div>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-grid-alt' ></i>
+                    </div>
+                </div>
+            </nav>
+            <div class="line">
+              <hr>
+            </div>
+        </header>
+
+        <!--==================== CART ====================-->
+        <div class="cart" id="cart">
+            <i class='bx bx-x cart__close' id="cart-close"></i>
+
+            <h2 class="cart__title-center">My Cart</h2>
+
+            <div class="cart__container">
+                <article class="cart__card">
+                    <div class="cart__box">
+                        <img src="img/bg.webp" alt="" class="cart__img">
+                    </div>
+
+                    <div class="cart__details">
+                        <h3 class="cart__title">COCO CRUSH</h3>
+                        <span class="cart__price">$7100</span>
+
+                        <div class="cart__amount">
+                            <div class="cart__amount-content">
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-minus' ></i>
+                                </span>
+
+                                <span class="cart__amount-number">1</span>
+
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-plus' ></i>
+                                </span>
+                            </div>
+
+                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cart__card">
+                    <div class="cart__box">
+                        <img src="img/new3.webp" alt="" class="cart__img">
+                    </div>
+
+                    <div class="cart__details">
+                        <h3 class="cart__title">Circle Pendant</h3>
+                        <span class="cart__price">$2900</span>
+
+                        <div class="cart__amount">
+                            <div class="cart__amount-content">
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-minus' ></i>
+                                </span>
+
+                                <span class="cart__amount-number">1</span>
+
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-plus' ></i>
+                                </span>
+                            </div>
+
+                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cart__card">
+                    <div class="cart__box">
+                        <img src="img/featured3.webp" alt="" class="cart__img">
+                    </div>
+
+                    <div class="cart__details">
+                        <h3 class="cart__title">Vine Convertible Drop Earrings</h3>
+                        <span class="cart__price">$7600</span>
+
+                        <div class="cart__amount">
+                            <div class="cart__amount-content">
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-minus' ></i>
+                                </span>
+
+                                <span class="cart__amount-number">1</span>
+
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-plus' ></i>
+                                </span>
+                            </div>
+
+                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="cart__prices">
+                <span class="cart__prices-item">3 items</span>
+                <span class="cart__prices-total">$17600</span>
+            </div>
+        </div>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <div class="home__img-bg">
+                        <img src="img/bg.webp" alt="" class="home__img">
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">COCO CRUSH <br>TOI ET MOI RING</h1>
+                        <p class="home__description">
+                            Quilted motif, large version, 18K white and BEIGE GOLD, diamonds
+                        </p>
+                        <span class="home__price">$7100</span>
+
+                        <div class="home__btns">
+                            <button class="button home__button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== FEATURED ====================-->
+            <section class="featured section container" id="featured">
+                <h2 class="section__title">
+                    Featured
+                </h2>
+
+                <div class="featured__container grid">
+                    <article class="featured__card">
+                        <span class="featured__tag">Sale</span>
+
+                        <img src="img/featured1.jpg" alt="" class="featured__img">
+
+                        <div class="featured__data">
+                            <h3 class="featured__title">Millenary Frosted Cadran Opale</h3>
+                            <span class="featured__price">$54,564</span>
+                        </div>
+
+                        <button class="button featured__button">ADD TO CART</button>
+                    </article>
+
+                    <article class="featured__card">
+                        <span class="featured__tag">Sale</span>
+
+                        <img src="img/featured2.webp" alt="" class="featured__img">
+
+                        <div class="featured__data">
+                            <h3 class="featured__title">Olive Leaf Heart Pendant</h3>
+                            <span class="featured__price">$325</span>
+                        </div>
+
+                        <button class="button featured__button">ADD TO CART</button>
+                    </article>
+
+                    <article class="featured__card">
+                        <span class="featured__tag">Sale</span>
+
+                        <img src="img/featured3.webp" alt="" class="featured__img">
+
+                        <div class="featured__data">
+                            <h3 class="featured__title">Vine Convertible Drop Earrings</h3>
+                            <span class="featured__price">$7600</span>
+                        </div>
+
+                        <button class="button featured__button">ADD TO CART</button>
+                    </article>
+                </div>
+            </section>
+
+            <!--==================== STORY ====================-->
+            <section class="story section container">
+                <div class="story__container grid">
+                    <div class="story__data">
+                        <h2 class="section__title story__section-title">
+                            2-Hand 24 mm Watch
+                        </h2>
+
+                        <h1 class="story__title">
+                            in Stainless Steel with Diamonds <br> and a Navy Soleil Dial
+                        </h1>
+
+                        <p class="story__description">
+                          Inspired by the clean lines of the Roman numerals in the clock above the entrance at the Tiffany Fifth Avenue flagship store,
+                          the Atlas® watch collection combines graphic clarity with functional elegance for pieces that are easy to wear every day.
+                          A modern iteration of strong and elemental design, this 24 mm round watch is designed in stainless steel with
+                          refined diamond accents and a navy soleil dial.
+                        </p>
+
+                        <a href="#" class="button button--small">$5900</a>
+                    </div>
+
+                    <div class="story__images">
+                        <img src="img/story.webp" alt="" class="story__img">
+                        <div class="story__square"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== NEW ====================-->
+            <section class="new section container" id="new">
+                <h2 class="section__title">
+                    New Arrivals
+                </h2>
+
+                <div class="new__container">
+                    <div class="swiper new-swiper">
+                        <div class="swiper-wrapper">
+                            <article class="new__card swiper-slide">
+                                <span class="new__tag">New</span>
+
+                                <img src="img/new1.webp" alt="" class="new__img">
+
+                                <div class="new__data">
+                                    <h3 class="new__title">Double Row Hinged Bangle</h3>
+                                    <span class="new__price">$22000</span>
+                                </div>
+
+                                <button class="button new__button">ADD TO CART</button>
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <span class="new__tag">New</span>
+
+                                <img src="img/new2.webp" alt="" class="new__img">
+
+                                <div class="new__data">
+                                    <h3 class="new__title">Vine Wire Bracelet</h3>
+                                    <span class="new__price">$5100</span>
+                                </div>
+
+                                <button class="button new__button">ADD TO CART</button>
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <span class="new__tag">New</span>
+
+                                <img src="img/new3.webp" alt="" class="new__img">
+
+                                <div class="new__data">
+                                    <h3 class="new__title">Circle Pendant</h3>
+                                    <span class="new__price">$2900</span>
+                                </div>
+
+                                <button class="button new__button">ADD TO CART</button>
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <span class="new__tag">New</span>
+
+                                <img src="img/new4.webp" alt="" class="new__img">
+
+                                <div class="new__data">
+                                    <h3 class="new__title">Vine Drop Necklace</h3>
+                                    <span class="new__price">$2200</span>
+                                </div>
+
+                                <button class="button new__button">ADD TO CART</button>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== FOOTER ====================-->
+            <footer>
+              <div class="row">
+                <div class="col">
+                  <!-- logo -->
+                  <div class="footer-logo">
+                    <a href="index.html"><img src="img/logo.png" width="300px"></a>
+                  </div>
+                  <!-- text under the logo -->
+                  <p>Follow us on our social medias for more content and to stay up-to-date
+                  with all the trends. Establish your style with us.</p>
+                </div>
+                <div class="col">
+                  <!-- address column -->
+                  <h3>Office <div class="underline"><span></span></div></h3>
+                  <p>Summerdale</p>
+                  <p>Boon Lay, Singapore</p>
+                  <p class="email-id">saluja002@mymail.sim.edu.sg</p>
+                  <h4>+65-84357902</h4>
+                </div>
+                <div class="col">
+                  <!-- footer navigation -->
+                  <div class="footer-navbar">
+                    <h3>Links <div class="underline"><span></span></div></h3>
+                    <ul>
+                      <li><a href="fashion.html">Fashion</a></li>
+                      <li><a href="beauty.html">Beauty</a></li>
+                      <li><a href="celebrities.html">Celebrities</a></li>
+                      <li><a href="jwellery.html">Jwellery</a></li>
+                      <li><a href="shows.html">Shows</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col">
+                  <!-- newsletter form -->
+                  <h3>Newsletter <div class="underline"><span></span></div></h3>
+                  <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email-id" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                  </form>
+                  <!-- social media icons -->
+                  <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-pinterest"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- divider between footer and the copyright content -->
+              <hr>
+              <p class="copyright">Bling Fashion Magazine 2022 - All Rights Reserved</p>
+            </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+        </a>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="javascript/swiper-bundle-jwellery.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="javascript/jwellery.js"></script>
+
+        <!--============FOR HEADER================== -->
+        <!--=============== SWIPER JS ===============-->
+        <script src="javascript/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="javascript/main.js"></script>
+    </body>
+</html>
